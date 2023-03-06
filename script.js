@@ -1,4 +1,4 @@
-var name = prompt("Please enter your name:");
+var name = prompt("Por favor, escriba su nombre:");
 alert("Hola, " + name + "!, " + "bienvenido/a.");
 
   
