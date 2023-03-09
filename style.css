@@ -3,38 +3,10 @@
   box-sizing: border-box;
 }
 .container-fluid{
-  height:90vh;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content:space-around;
-  align-items: center;
-  overflow:auto;
+  height:100vh;
+  overflow-x:hidden;
+  }
 
-  
-}
-/* Small screens - MOBILE */
-@media only screen { } /* Define mobile styles - Mobile First */
- 
-@media only screen and (max-width: 40em) { } /* max-width 640px, mobile-only styles, use when QAing mobile issues */
- 
-/* Medium screens - TABLET */
-@media only screen and (min-width: 40.063em) { } /* min-width 641px, medium screens */
- 
-@media only screen and (min-width: 40.063em) and (max-width: 64em) { } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
- 
-/* Large screens - DESKTOP */
-@media only screen and (min-width: 64.063em) { } /* min-width 1025px, large screens */
- 
-@media only screen and (min-width: 64.063em) and (max-width: 90em) { } /* min-width 1024px and max-width 1440px, use when QAing large screen-only issues */
- 
-/* XLarge screens */
-@media only screen and (min-width: 90.063em) { } /* min-width 1441px, xlarge screens */
- 
-@media only screen and (min-width: 90.063em) and (max-width: 120em) { } /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
- 
-/* XXLarge screens */
-@media only screen and (min-width: 120.063em) { } /* min-width 1921px, xlarge screens */
 
 
 .card {
@@ -51,6 +23,13 @@
   50%  {background-color:rgb(87, 87, 250); left:20px; top:20px;}
   75%  {background-color:rgb(5, 255, 5); left:0px; top:20px;}
   100% {background-color:rgb(254, 130, 130); left:0px; top:0px;}
+}
+
+@media (max-width: 575px) {
+  .card {
+    min-height: 150px !important;
+    margin-left: 25%;
+  }
 }
 
 .tx{
@@ -81,8 +60,8 @@
 }
 
 .icon{
-  height:10%;
-  width:100vw;
+  height:2em;
+  width:100%;
   background-image: linear-gradient(rgb(57, 51, 51), rgb(44, 44, 57));
 }
 ul.socialIcons {
@@ -147,4 +126,23 @@ ul.socialIcons {
 .socialIcons .youtube {
   background-color: #f91717;
   box-shadow: 0 0 16px #f94949;
+}
+
+#nombre{
+  font-size:40px;
+  font-family: 'Courgette', cursive;
+  top: 5px;
+  left:5px;
+  animation: neon2 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px rgb(83, 4, 254), 0 0 20px rgb(62, 4, 252), 0 0 30px rgb(89, 7, 241) 0 40px #ff1177,
+      0 0 70px #ff1177, 0 0 20px #ff1177, 0 0 10px #ff1177, 0 0 15px #ff1177;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff1177,
+      0 0 35px #3111ff, 0 0 4px #6011ff, 0 0 5px #2511ff, 0 0 25px #4511ff;
+  }
 }
